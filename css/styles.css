@@ -543,7 +543,7 @@ img {
 
 .footer .container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .footer .contacts {
   margin-left: 70px;
@@ -677,7 +677,7 @@ img {
   align-items: center;
   width: 30px;
   height: 30px;
-  backg/round-color: var(--primary-white-color);
+  background-color: var(--primary-white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
