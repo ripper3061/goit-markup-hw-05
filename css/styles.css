@@ -100,12 +100,15 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list .link:hover,
 .nav-list .link:focus {
   color: var(--accent-color);
-  text-decoration: none;
 }
 
 .nav-list .link.current {
@@ -146,6 +149,10 @@ img {
   line-height: 1.33;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-contacts .contacts:hover,
@@ -376,12 +383,17 @@ img {
   margin-bottom: 0px;
 
   fill: var(--icon-bg-color);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-contacts .link:hover,
 .team-contacts .link:focus {
   background-color: var(--accent-color);
-  border-radius: 50%;
 
   fill: var(--primary-white-color);
 }
@@ -407,6 +419,10 @@ img {
   width: 170px;
   height: 92px;
   margin-bottom: 0px;
+
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list .link:hover,
@@ -576,6 +592,10 @@ img {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   fill: var(--primary-white-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .link:hover,
@@ -603,6 +623,10 @@ img {
   border: 0px;
   border-radius: 4px;
   padding: 10px 32px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -625,6 +649,10 @@ img {
   padding: 6px 22px;
   border: 0px;
   border-radius: 4px;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
