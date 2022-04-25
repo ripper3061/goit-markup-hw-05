@@ -19,6 +19,7 @@
   --footer-bcg-color: #2f303a;
   --card-border-color: #eeeeee;
   --icon-bg-color: #afb1b8;
+  --animation-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -101,7 +102,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--animation-function);
 }
 
 .nav-list .link:hover,
@@ -117,7 +118,7 @@ img {
 .nav-list .link.current:after {
   content: '';
   position: absolute;
-  bottom: calc(0% - 1px);
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -148,8 +149,8 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--animation-function),
+    fill 250ms var(--animation-function);
 }
 
 .nav-contacts .contacts:hover,
@@ -383,8 +384,8 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--animation-function),
+    fill 250ms var(--animation-function);
 }
 
 .team-contacts .link:hover,
@@ -416,8 +417,8 @@ img {
   height: 92px;
   margin-bottom: 0px;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms var(--animation-function),
+    fill 250ms var(--animation-function);
 }
 
 .clients-list .link:hover,
@@ -463,13 +464,13 @@ img {
   color: var(--primary-text-color);
 }
 
-.projects-section-title .thumb {
+.projects-section-title .card-img {
   position: relative;
 
   overflow: hidden;
 }
 
-.projects-section-title .thumb-content {
+.projects-section-title .card-img-content {
   position: absolute;
   top: 0;
   left: 0;
@@ -489,17 +490,17 @@ img {
   width: 100%;
   height: 100%;
 
-  transform: translateY(294px);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  transition: transform 250ms var(--animation-function);
 }
 
-.projects-section-title .item:hover .thumb-content,
-.projects-section-title .item:focus .thumb-content {
+.projects-section-title .item:hover .card-img-content,
+.projects-section-title .item:focus .card-img-content {
   transform: translateY(0px);
 }
 
 .projects-section-title .item {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms var(--animation-function);
 }
 
 .projects-section-title .item:hover,
@@ -597,7 +598,7 @@ img {
   border-radius: 50%;
   fill: var(--primary-white-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--animation-function);
 }
 
 .footer .link:hover,
@@ -626,7 +627,7 @@ img {
   border-radius: 4px;
   padding: 10px 32px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--animation-function);
 }
 
 .hero-button:hover,
@@ -650,9 +651,9 @@ img {
   border: 0px;
   border-radius: 4px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--animation-function),
+    color 250ms var(--animation-function),
+    box-shadow 250ms var(--animation-function);
 }
 
 .button:hover,
@@ -673,32 +674,46 @@ img {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  visibility: visible;
+  opacity: 1;
 }
 
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+
+  transition: opacity 250ms var(--animation-function),
+    visibility 250ms var(--animation-function);
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 0;
+}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   min-width: 528px;
   min-height: 581px;
 
+  opacity: 1;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform 250ms var(--animation-function),
+    opacity 250ms var(--animation-function);
 }
 
 .modal-button {
   position: absolute;
-  top: calc(0% + 8px);
-  right: calc(0% + 8px);
+  top: +8px;
+  right: +8px;
 
   display: flex;
   justify-content: center;
