@@ -101,9 +101,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list .link:hover,
@@ -150,9 +148,8 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
 
-  transition-property: color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-contacts .contacts:hover,
@@ -386,9 +383,8 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0);
 
-  transition-property: background-color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-contacts .link:hover,
@@ -420,9 +416,8 @@ img {
   height: 92px;
   margin-bottom: 0px;
 
-  transition-property: border, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list .link:hover,
@@ -430,6 +425,7 @@ img {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
 }
+
 /* секция Наши проекты в портфолио */
 .btn-projects {
   margin-bottom: 50px;
@@ -494,9 +490,7 @@ img {
   height: 100%;
 
   transform: translateY(294px);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-section-title .item:hover .thumb-content,
@@ -505,9 +499,7 @@ img {
 }
 
 .projects-section-title .item {
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-section-title .item:hover,
@@ -605,9 +597,7 @@ img {
   border-radius: 50%;
   fill: var(--primary-white-color);
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .link:hover,
@@ -636,9 +626,7 @@ img {
   border-radius: 4px;
   padding: 10px 32px;
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -662,9 +650,9 @@ img {
   border: 0px;
   border-radius: 4px;
 
-  transition-property: background-color, color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
